@@ -6,6 +6,10 @@ import { authenticateToken, createNewToken } from "../controllers/jwtController.
 
 const router = express.Router();
 
+router.get('/',(req,res)=>{
+    res.send("hello server...")
+})
+
 router.get("/products", getProducts);
 router.get("/products/:id", getProductById);
 
